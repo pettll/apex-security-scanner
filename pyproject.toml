@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "apex-security-scanner"
+version = "0.1.0"
+description = "OWASP-based static security scanner for Salesforce Apex code"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["salesforce", "apex", "security", "owasp", "sast"]
+
+[project.scripts]
+apex-scan = "apex_security_scanner.cli:run"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
